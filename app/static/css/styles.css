@@ -1,0 +1,76 @@
+:root {
+  color-scheme: dark;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #1c1f3a, #0e0f17 60%);
+  color: #eef2ff;
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin-top: 8px;
+  color: #bac3ff;
+}
+
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+button {
+  border: 0;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+}
+
+button.active {
+  box-shadow: 0 0 0 2px #fff6;
+}
+
+.chip.blue { background: #3b82f6; }
+.chip.green { background: #10b981; }
+.chip.red { background: #ef4444; }
+.chip.yellow { background: #eab308; color: #111827; }
+.mode { background: #6366f1; }
+.clear { background: #334155; }
+
+.canvas-wrap {
+  border: 1px solid #ffffff22;
+  border-radius: 18px;
+  padding: 10px;
+  backdrop-filter: blur(8px);
+  background: #11152ab3;
+}
+
+#stream {
+  width: 100%;
+  border-radius: 12px;
+  display: block;
+  min-height: 420px;
+  object-fit: cover;
+  background: #0b1022;
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AirDraw AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <header>
+        <h1>AirDraw AI</h1>
+        <p>Draw in the air using your index finger. Raise two fingers in the top bar to switch tools.</p>
+      </header>
+
+      <section class="controls" aria-label="Drawing controls">
+        <button data-color="blue" class="chip blue active">Blue</button>
+        <button data-color="green" class="chip green">Green</button>
+        <button data-color="red" class="chip red">Red</button>
+        <button data-color="yellow" class="chip yellow">Yellow</button>
+        <button data-mode="draw" class="mode active">Draw</button>
+        <button data-mode="erase" class="mode">Eraser</button>
+        <button id="clear-canvas" class="clear">Clear</button>
+      </section>
+
+      <section class="canvas-wrap">
+        <img id="stream" src="{{ url_for('video_feed') }}" alt="AirDraw live stream" />
+      </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+  </body>
+</html>
